@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pongsak D - Personal Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ff79c6",
+                        "background-light": "#f8f8f2",
+                        "background-dark": "#282a36",
+                        "card-dark": "#44475a",
+                        "text-light": "#282a36",
+                        "text-dark": "#f8f8f2",
+                        "accent": "#8be9fd"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen w-full flex-col items-center p-4">
+<div class="w-full max-w-4xl">
+<!-- ProfileHeader -->
+<div class="flex p-4 @container justify-center">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32" data-alt="Pongsak D's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1JTWDP40RM6DLmCuBvXtjflP_PUhrPVULqwifApjiiE2JjS7GTq91judAGNADSbxMpMHXIoqVuD0mO4RfgwBneot8gVueeS5oTbkDG_zg5CfFOHOWPMvelm_AHypfA1yibGCh--Vap3PAKddju2LC9jodY7DX6LePl7xLa24rzL8C3NSms6SFyDiTXFaTCEGcy9-hvQHIS6yp-k-zTaI8MFhArMIfMWtr9QUP8JZwGGDNmSq9cADqaCVcd0Tf1_AURAD5tmxRV_05");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-text-light dark:text-text-dark text-[28px] font-bold leading-tight tracking-[-0.015em] text-center">Pongsak D</p>
+<p class="text-primary text-lg font-normal leading-normal text-center">90s web development meets modern AI</p>
+</div>
+</div>
+</div>
+</div>
+<!-- About Me Section -->
+<div class="pt-8">
+<h2 class="text-accent text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Me</h2>
+<p class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed pb-3 pt-1 px-4">A paragraph expanding on the user's background, interests, and professional journey. With a nostalgic appreciation for the early days of the web, I bring a unique perspective to modern development, blending classic principles with the cutting-edge capabilities of artificial intelligence. My passion lies in creating intuitive, powerful applications that push the boundaries of what's possible.</p>
+</div>
+<!-- Skills Section -->
+<div class="pt-8">
+<h2 class="text-accent text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Skills</h2>
+<div class="flex gap-3 p-4 flex-wrap">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">React</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Python</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">TensorFlow</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">HTML/CSS</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">JavaScript</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Node.js</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-background-light dark:bg-card-dark px-5">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Docker</p>
+</div>
+</div>
+</div>
+<!-- Projects Section -->
+<div class="pt-8">
+<h2 class="text-accent text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+<div class="bg-background-light dark:bg-card-dark rounded-lg p-6 flex flex-col">
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold">AI Chatbot</h3>
+<p class="text-text-light dark:text-text-dark/80 text-base mt-2 flex-grow">A conversational AI built with TensorFlow and deployed using a serverless architecture. Capable of natural language understanding and context-aware responses.</p>
+<a class="text-primary hover:underline mt-4 self-start" href="#">View Project →</a>
+</div>
+<div class="bg-background-light dark:bg-card-dark rounded-lg p-6 flex flex-col">
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold">Retro Game Emulator</h3>
+<p class="text-text-light dark:text-text-dark/80 text-base mt-2 flex-grow">A web-based emulator for classic 90s video games, built with pure JavaScript and HTML5 Canvas for a nostalgic gaming experience.</p>
+<a class="text-primary hover:underline mt-4 self-start" href="#">View Project →</a>
+</div>
+</div>
+</div>
+<!-- Contact Section -->
+<div class="pt-8">
+<h2 class="text-accent text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
+<div class="flex justify-center gap-8 p-4">
+<a class="text-text-light dark:text-text-dark hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.477 17.523 2 12 2z" fill-rule="evenodd"></path></svg>
+<span class="sr-only">GitHub</span>
+</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span class="sr-only">LinkedIn</span>
+</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined w-8 h-8 text-3xl">mail</span>
+<span class="sr-only">Email</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</body></html>
