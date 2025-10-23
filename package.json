@@ -1,12 +1,9 @@
-// package.json
 {
   "name": "my-portfolio-site",
   "version": "1.0.0",
   "description": "Portfolio built with simple HTML/CSS and potentially some build tools.",
   "scripts": {
-    "build": "echo 'Starting build process...' > build_log.txt"
+    "build": "echo 'Starting build process...' > build_log.txt" 
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
