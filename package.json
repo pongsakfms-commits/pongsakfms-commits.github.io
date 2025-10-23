@@ -1,0 +1,12 @@
+{
+  "name": "my-portfolio-site",
+  "version": "1.0.0",
+  "description": "Portfolio built with simple HTML/CSS and potentially some build tools.",
+  "scripts": {
+    "build": "echo 'Starting build process...' > build_log.txt" 
+    // ถ้าใช้ HTML/CSS ธรรมดา คำสั่งนี้ก็พอ
+  },
+  "dependencies": {
+    // ถ้าคุณมี libraries/dependencies ที่ใช้ build ให้เพิ่มตรงนี้
+  }
+}
