@@ -1,0 +1,33 @@
+# .github/workflows/docker_build.yml
+name: Docker Build and Push to GHCR
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # สำคัญ: สิทธิ์ในการ Push Image ไปยัง GHCR
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry (GHCR)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          # ตั้งชื่อ Image ตาม Repository
+          tags: ghcr.io/${{ github.repository }}:latest 
+          file: ./Dockerfile
