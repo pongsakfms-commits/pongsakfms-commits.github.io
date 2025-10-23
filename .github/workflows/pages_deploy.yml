@@ -3,7 +3,7 @@ name: Build (npm) and Deploy Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] # Trigger เมื่อ push ไปที่ Branch 'main'
 
 jobs:
   build-and-deploy:
@@ -11,30 +11,38 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    
+    # <<< ส่วนสำคัญที่ต้องแก้ไข/เพิ่มเข้าไปเพื่อแก้ปัญหาสิทธิ์ >>>
+    permissions: 
+      contents: read
+      pages: write
+      id-token: write
+    # <<< สิ้นสุดการแก้ไข/เพิ่มเข้าไป >>>
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      # 1. Setup Node.js
+      
+      # ขั้นตอน Node.js/npm Build
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # ใช้เวอร์ชัน Node.js ที่ต้องการ
 
       - name: Install Dependencies (npm)
-        run: npm install
+        run: npm install  # ติดตั้งตาม package.json
 
       - name: Run Build Script
-        run: npm run build
+        run: npm run build # รันคำสั่ง build ที่กำหนดใน package.json
 
-      # 2. Deploy Pages
+      # ขั้นตอน Deploy Pages
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './'
+          path: './' # อัปโหลดไฟล์ทั้งหมดใน Root (ถ้าผลลัพธ์อยู่ที่ Root)
 
       - name: Deploy to GitHub Pages
         id: deployment
